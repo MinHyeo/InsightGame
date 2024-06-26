@@ -388,9 +388,12 @@
 "Assets/Hero Knight - Pixel Art/Demo/DestroyEvent_HeroKnight.cs"
 "Assets/Hero Knight - Pixel Art/Demo/HeroKnight.cs"
 "Assets/Hero Knight - Pixel Art/Demo/Sensor_HeroKnight.cs"
-"Assets/Main/Scripts/Goblin.cs"
 "Assets/Main/Scripts/Interfaces.cs"
-"Assets/Main/Scripts/Monster.cs"
+"Assets/Main/Scripts/Monster/Goblin/Goblin.cs"
+"Assets/Main/Scripts/Monster/Goblin/GoblinAttack.cs"
+"Assets/Main/Scripts/Monster/Goblin/GoblinFollow.cs"
+"Assets/Main/Scripts/Monster/Goblin/GoblinSearch.cs"
+"Assets/Main/Scripts/Monster/Monster.cs"
 -langversion:9.0
 /deterministic
 /optimize+

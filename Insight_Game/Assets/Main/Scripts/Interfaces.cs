@@ -6,10 +6,14 @@ interface IHittable
 }
 interface ISearchable 
 {
-    public void Search(Collider2D collider);
+    public void Search();
 }
 interface IAttackable 
 {
     public void Attack();
+}
+interface IFollowable
+{
+    public void Follow();
 }
 
