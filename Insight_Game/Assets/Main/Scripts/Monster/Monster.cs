@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Monster 
 {
-    public class Monster : MonoBehaviour
+    public abstract class Monster : MonoBehaviour
     {
         public enum State
         {
@@ -16,6 +16,7 @@ namespace Monster
         }
         public State MonsterState;
 
+        protected Transform target;
         protected int health;
         protected float speed;
         protected float attackRange;

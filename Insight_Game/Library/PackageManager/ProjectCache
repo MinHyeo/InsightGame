@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638548190099226365
-    m_Hash: 1037870116
+      ticks: 638550329982658814
+    m_Hash: 1587785899
   m_LockFileStatus:
     m_FilePath: C:/Users/user/Documents/GitHub/InsightGame/Insight_Game/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638548190609598033
-    m_Hash: 2540056342
+      ticks: 638550329982702313
+    m_Hash: 1354365551
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -471,6 +471,118 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 2.0.22
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  fingerprint: 
+- packageId: com.unity.memoryprofiler@1.1.0
+  testable: 0
+  isDirectDependency: 1
+  version: 1.1.0
+  source: 1
+  resolvedPath: C:\Users\user\Documents\GitHub\InsightGame\Insight_Game\Library\PackageCache\com.unity.memoryprofiler@1.1.0
+  assetPath: Packages/com.unity.memoryprofiler
+  name: com.unity.memoryprofiler
+  displayName: Memory Profiler
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: The Memory Profiler offers a unified solution allowing you to profile
+    both small projects on mobile devices and big AAA projects on high end machines.
+    It provides actionable information about allocations in the engine to allow developers
+    to manage and reduce memory usage.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.1.0-preview.1
+    - 0.1.0-preview.2
+    - 0.1.0-preview.3
+    - 0.1.0-preview.4
+    - 0.1.0-preview.5
+    - 0.1.0-preview.6
+    - 0.1.0-preview.7
+    - 0.1.0-preview.8
+    - 0.1.0-preview.9
+    - 0.2.0-preview.1
+    - 0.2.1-preview.1
+    - 0.2.1-preview.2
+    - 0.2.2-preview.1
+    - 0.2.3-preview.1
+    - 0.2.3-preview.2
+    - 0.2.4-preview.1
+    - 0.2.5-preview.1
+    - 0.2.6-preview.1
+    - 0.2.7-preview.1
+    - 0.2.8-preview.1
+    - 0.2.8-preview.2
+    - 0.2.9-preview.1
+    - 0.2.9-preview.3
+    - 0.2.10-preview.1
+    - 0.4.0-preview.1
+    - 0.4.0-preview.2
+    - 0.4.1-preview.1
+    - 0.4.2-preview.1
+    - 0.4.3-preview.1
+    - 0.4.4-preview.2
+    - 0.5.0-preview.1
+    - 0.5.1-preview.1
+    - 0.6.0-preview.1
+    - 0.7.0-preview.1
+    - 0.7.0-preview.2
+    - 0.7.1-preview.1
+    - 1.0.0-pre.1
+    - 1.0.0-pre.2
+    - 1.0.0-pre.3
+    - 1.0.0
+    - 1.1.0-exp.1
+    - 1.1.0-exp.2
+    - 1.1.0-pre.1
+    - 1.1.0-pre.3
+    - 1.1.0
+    compatible:
+    - 1.1.0
+    recommended: 1.1.0
+    deprecated: []
+  dependencies:
+  - name: com.unity.editorcoroutines
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.editorcoroutines
+    version: 1.0.0
+  keywords:
+  - profiler
+  - memory
+  - memoryprofiler
+  - snapshot
+  - profiling
+  - tool
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638334775400000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.memoryprofiler@1.1/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.memoryprofiler.git
+    revision: 2297acd0384cc2f42d24e670a5990104bedc19c5
+    path: 
+  unityLifecycle:
+    version: 1.1.0
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -3993,6 +4105,72 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 14.0.10
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  fingerprint: 
+- packageId: com.unity.editorcoroutines@1.0.0
+  testable: 0
+  isDirectDependency: 0
+  version: 1.0.0
+  source: 1
+  resolvedPath: C:\Users\user\Documents\GitHub\InsightGame\Insight_Game\Library\PackageCache\com.unity.editorcoroutines@1.0.0
+  assetPath: Packages/com.unity.editorcoroutines
+  name: com.unity.editorcoroutines
+  displayName: Editor Coroutines
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: 'The editor coroutines package allows developers to start constructs
+    similar to Unity''s monobehaviour based coroutines within the editor using abitrary
+    objects. '
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.0.1-preview.3
+    - 0.0.1-preview.4
+    - 0.0.1-preview.5
+    - 0.0.2-preview.1
+    - 0.1.0-preview.1
+    - 0.1.0-preview.2
+    - 1.0.0
+    compatible:
+    - 1.0.0
+    recommended: 1.0.0
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - coroutine
+  - coroutines
+  - editor
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637232611380000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.editorcoroutines.git
+    revision: f67fc9992bbc7a553b17375de53a8b2db136528e
+    path: 
+  unityLifecycle:
+    version: 1.0.0
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0

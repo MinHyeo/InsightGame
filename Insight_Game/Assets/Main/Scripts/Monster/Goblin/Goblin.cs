@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using Unity.Collections.LowLevel.Unsafe;
+using UnityEditor.U2D.Sprites;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Monster.Goblin
 {
@@ -12,41 +8,43 @@ namespace Monster.Goblin
     {
         [SerializeField]private GoblinSearch goblinSearch;
         [SerializeField]private GoblinAttack goblinAttack;
-        [SerializeField]private GoblinFollow goblinFollw;
+        [SerializeField]private GoblinFollow goblinFollow;
 
         private Collider2D attackPoint;
-        private Transform playerTransform;
 
         private void Awake()
         {
             goblinSearch = GetComponent<GoblinSearch>();
             goblinAttack = GetComponent<GoblinAttack>();
-            goblinFollw = GetComponent<GoblinFollow>();
+            goblinFollow = GetComponent<GoblinFollow>();
 
             goblinSearch.PlayerFound += OnPlayerFound;
+            goblinSearch.PlayerUnfound += OnPlayerUnfound;
         }
 
         private void Start()
         {
             MonsterState = State.Idle;
             health = 100;
-            speed = 5.0f;
+            speed = 2.0f;
             attackRange = 2.0f;
             attackSpeed = 1.0f;
             attackDamage = 10.0f;
+
+            goblinFollow.Speed = speed;
         }
         private void Update()
         {
+            goblinSearch.Search();
+
             switch (MonsterState)
             {
                 case State.Idle:
-                    goblinSearch.Search();
                     break;
                 case State.Walking:
-                    goblinSearch.Search();
                     break;
                 case State.Following:
-                    goblinFollw.Follow();
+                    goblinFollow.Follow();
                     break;
                 case State.Attacking:
                     goblinAttack.Attack();
@@ -58,8 +56,15 @@ namespace Monster.Goblin
 
         private void OnPlayerFound()
         {
+            this.target = goblinSearch.Target;
+            goblinFollow.Target = target;
             MonsterState = State.Following;
-            playerTransform = goblinSearch.PlayerTransform;
+        }
+        private void OnPlayerUnfound()
+        {
+            this.target = null;
+            goblinFollow.Target = null;
+            MonsterState = State.Idle;
         }
     }
     
