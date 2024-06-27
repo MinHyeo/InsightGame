@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638550329982658814
+      ticks: 638550845842274978
     m_Hash: 1587785899
   m_LockFileStatus:
     m_FilePath: C:/Users/user/Documents/GitHub/InsightGame/Insight_Game/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638550329982702313
+      ticks: 638550845842274978
     m_Hash: 1354365551
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}

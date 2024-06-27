@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEditor.U2D.Sprites;
 using UnityEngine;
 
@@ -24,6 +25,14 @@ namespace Monster.Goblin
 
         private void Start()
         {
+            StateInit();
+        }
+        protected override void StateInit()
+        {
+            checkAttackable = GetComponentInChildren<CheckAttackable>();
+            checkAttackable.PlayerAttacked += OnPlayerAttack;
+            checkAttackable.PlayerUnAttacked += OnPlayerUnAttack;
+
             MonsterState = State.Idle;
             health = 100;
             speed = 2.0f;
@@ -35,19 +44,22 @@ namespace Monster.Goblin
         }
         private void Update()
         {
-            goblinSearch.Search();
+            Debug.Log(MonsterState);
 
             switch (MonsterState)
             {
                 case State.Idle:
+                    goblinSearch.Search();
                     break;
                 case State.Walking:
+                    goblinSearch.Search();
                     break;
                 case State.Following:
+                    goblinSearch.Search();
                     goblinFollow.Follow();
                     break;
                 case State.Attacking:
-                    goblinAttack.Attack();
+                    StartCoroutine(goblinAttack.AttackCoroutine());
                     break;
                 case State.Dead:
                     break;
@@ -66,6 +78,13 @@ namespace Monster.Goblin
             goblinFollow.Target = null;
             MonsterState = State.Idle;
         }
+        private void OnPlayerAttack()
+        {
+            MonsterState = State.Attacking;
+        }
+        private void OnPlayerUnAttack()
+        {
+            MonsterState = State.Following;
+        }
     }
-    
 }

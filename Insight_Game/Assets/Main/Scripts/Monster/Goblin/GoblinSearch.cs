@@ -13,18 +13,15 @@ namespace Monster.Goblin
 
         public void Search()
         {
-            Debug.Log("Monster is searching for the player.");
-
             RaycastHit2D raycastHit = Physics2D.BoxCast(transform.position, boxCastSize, 0f, Vector2.down, 0f, LayerMask.GetMask("Player"));
             if (raycastHit.collider != null)
             {
-                Debug.Log("Monster found the player.");
                 Target = raycastHit.transform;
                 PlayerFound?.Invoke();
             }
             else
             {
-                Debug.Log("Monster did not find the player.");
+                Target = null;
                 PlayerUnfound?.Invoke();
             }
         }

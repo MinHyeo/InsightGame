@@ -16,8 +16,6 @@ namespace Monster.Goblin
 
         public void Follow()
         {
-            Debug.Log("Monster is following the player.");
-
             dir = Target.position.x < transform.position.x ? 1 : -1;
             sprite.flipX = dir == 1 ? true : false;
             transform.position = Vector2.MoveTowards(transform.position, Target.position, Speed * Time.deltaTime);

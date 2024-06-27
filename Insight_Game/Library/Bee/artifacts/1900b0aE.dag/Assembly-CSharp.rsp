@@ -393,6 +393,8 @@
 "Assets/Hero Knight - Pixel Art/Demo/HeroKnight.cs"
 "Assets/Hero Knight - Pixel Art/Demo/Sensor_HeroKnight.cs"
 "Assets/Main/Scripts/Interfaces.cs"
+"Assets/Main/Scripts/Monster/Animation/MonsterAnimationController.cs"
+"Assets/Main/Scripts/Monster/CheckAttackable.cs"
 "Assets/Main/Scripts/Monster/Goblin/Goblin.cs"
 "Assets/Main/Scripts/Monster/Goblin/GoblinAttack.cs"
 "Assets/Main/Scripts/Monster/Goblin/GoblinFollow.cs"

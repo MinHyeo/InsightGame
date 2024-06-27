@@ -16,4 +16,3 @@ interface IFollowable
 {
     public void Follow();
 }
-

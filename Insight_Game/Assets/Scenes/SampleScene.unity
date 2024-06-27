@@ -748,6 +748,8 @@ GameObject:
   - component: {fileID: 192292141}
   - component: {fileID: 192292140}
   - component: {fileID: 192292144}
+  - component: {fileID: 192292146}
+  - component: {fileID: 192292145}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Untagged
@@ -838,7 +840,7 @@ MonoBehaviour:
   MonsterState: 0
   goblinSearch: {fileID: 0}
   goblinAttack: {fileID: 0}
-  goblinFollw: {fileID: 0}
+  goblinFollow: {fileID: 0}
 --- !u!61 &192292141
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -910,7 +912,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!95 &192292143
 Animator:
   serializedVersion: 5
@@ -942,6 +944,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dcdd56b48b50c34bbe4042f4f52de76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &192292145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192292137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6568beaa9ff605c4ab65f098b92ed372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &192292146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192292137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07b5f8c5a2ee584fbe2e07437c859a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &519420028
@@ -1466,6 +1492,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8942925490989933264, guid: a4b4a6d32bcb19248a754d6602ffc7e4, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1565,6 +1595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1949565431}
   - component: {fileID: 1949565432}
+  - component: {fileID: 1949565433}
   m_Layer: 0
   m_Name: AttackPoint
   m_TagString: Untagged
@@ -1616,7 +1647,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1632,6 +1663,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.3}
   m_EdgeRadius: 0
+--- !u!114 &1949565433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949565430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bbef65212c4d4646ad340a03cca104a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
