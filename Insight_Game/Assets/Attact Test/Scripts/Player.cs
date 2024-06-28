@@ -5,14 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public Animator animator;
-
     public float moveSpeed = 5f; // 플레이어 이동 속도
-    public Transform attackPoint;
-    public float attackRange = 0.5f;
     public LayerMask enemyLayers;
+    public Weapon weapon;
 
     private void Awake() {
         animator = GetComponent<Animator>();
+        weapon = GetComponentInChildren<Weapon>();
     }
     void Start() {
 
@@ -29,25 +28,13 @@ public class Player : MonoBehaviour {
 
     void Attack() {
         animator.SetTrigger("attack");
-
-        DetectEnemies();
     }
 
-    void DetectEnemies() {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        foreach (Collider2D enemy in hitEnemies) {
-            Debug.Log("hit");
-            enemy.GetComponent<Enemy>().TakeDamage(30);
-        }
+    void WeaponAttack() {
+        weapon.Attack();
+        Debug.Log("Animaion clip start");
     }
 
-
-    private void OnDrawGizmosSelected() {
-        if (attackPoint == null) {
-            return;
-        }
-            Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-    }
 
     public void Move() {
         // 플레이어 이동 처리
