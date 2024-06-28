@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour {
 
     public float maxHealth = 100;
-    [SerializeField] float curHealth;
+    public float curHealth;
 
     void Awake() {
     }
@@ -18,14 +18,7 @@ public class Enemy : MonoBehaviour {
     void Update() {
     }
 
-    void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.CompareTag("AttackCollider")) {
-            TakeDamage(30);
-            Debug.Log("dddd");
-        }
-    }
-
-    void TakeDamage(float damage) {
+    public void TakeDamage(float damage) {
         curHealth -= damage;
         if (curHealth <= 0) {
             gameObject.SetActive(false); // 오브젝트 비활성화

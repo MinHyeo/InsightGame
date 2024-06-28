@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    public Animator animator;
-    public GameObject attackCollider; // 공격 판정 콜라이더
-    public float moveSpeed = 5f; // 플레이어 이동 속도
 
-    void Start() {
+    public Animator animator;
+
+    public float moveSpeed = 5f; // 플레이어 이동 속도
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemyLayers;
+
+    private void Awake() {
         animator = GetComponent<Animator>();
-        attackCollider.SetActive(false);
+    }
+    void Start() {
+
     }
 
     void Update() {
@@ -23,16 +29,24 @@ public class Player : MonoBehaviour {
 
     void Attack() {
         animator.SetTrigger("attack");
+
+        DetectEnemies();
     }
 
-    // 애니메이션 이벤트에서 호출될 함수 (공격 시작 시)
-    public void EnableAttackCollider() {
-        attackCollider.SetActive(true);
+    void DetectEnemies() {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        foreach (Collider2D enemy in hitEnemies) {
+            Debug.Log("hit");
+            enemy.GetComponent<Enemy>().TakeDamage(30);
+        }
     }
 
-    // 애니메이션 이벤트에서 호출될 함수 (공격 종료 시)
-    public void DisableAttackCollider() {
-        attackCollider.SetActive(false);
+
+    private void OnDrawGizmosSelected() {
+        if (attackPoint == null) {
+            return;
+        }
+            Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
     public void Move() {

@@ -385,6 +385,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Attact Test/Scripts/Enemy.cs"
+"Assets/Attact Test/Scripts/MonsterUI.cs"
 "Assets/Attact Test/Scripts/Player.cs"
 "Assets/Hero Knight - Pixel Art/ColorSwap/ColorSwap_HeroKnight.cs"
 "Assets/Hero Knight - Pixel Art/Demo/DestroyEvent_HeroKnight.cs"
