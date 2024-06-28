@@ -8,6 +8,18 @@ public class EnemyMove : MonoBehaviour
     Animator anim;
     SpriteRenderer spriter;
 
+    public enum MonsterState
+    {
+        Idle,
+        Patrol,
+        Chase,
+        Attack,
+        Flee,
+        Search,
+        Dead
+    }
+
+    public MonsterState currentState = MonsterState.Idle;
     public int nextMove;
 
     private void Awake()
@@ -16,23 +28,23 @@ public class EnemyMove : MonoBehaviour
         anim = GetComponent<Animator>();
         spriter = GetComponent<SpriteRenderer>();
 
-        Invoke("Think", 4);
+        Invoke("ChangeState", 1);
     }
-    void FixedUpdate()
-    {
-        rigid.velocity = new Vector2(nextMove, rigid.velocity.y);
 
-        Vector2 frontVec = new Vector2(rigid.position.x + nextMove * 0.5f, rigid.position.y);
-        RaycastHit2D groundInfo = Physics2D.Raycast(frontVec, Vector2.down, 3f);
-        if (groundInfo.collider == false)
+    private void FixedUpdate()
+    {
+        switch (currentState)
         {
-            nextMove *= -1;
-            CancelInvoke();
-            Invoke("Think", 4);
+            case MonsterState.Idle:
+                Idle();
+                break;
+            case MonsterState.Patrol:
+                Patrol();
+                break;
         }
     }
 
-    void LateUpdate()
+    private void LateUpdate()
     {
         anim.SetFloat("velocity", rigid.velocity.magnitude);
 
@@ -41,12 +53,50 @@ public class EnemyMove : MonoBehaviour
             spriter.flipX = rigid.velocity.x < 0;
         }
     }
+
     void Think()
     {
         nextMove = Random.Range(-1, 2);
-
         Invoke("Think", 4);
+    }
 
-        Vector2 frontVec = new Vector2(rigid.position.x + nextMove * 0.5f, rigid.position.y);
+    void Idle()
+    {
+        rigid.velocity = new Vector2(0, rigid.velocity.y);
+    }
+
+    void Patrol()
+    {
+        if (currentState == MonsterState.Patrol)
+        {
+            rigid.velocity = new Vector2(nextMove, rigid.velocity.y);
+
+            Vector2 frontVec = new Vector2(rigid.position.x + nextMove * 0.5f, rigid.position.y);
+            RaycastHit2D groundInfo = Physics2D.Raycast(frontVec, Vector2.down, 3f);
+
+            if (groundInfo.collider == false)
+            {
+                nextMove *= -1;
+                CancelInvoke();
+                Invoke("Think", 4);
+            }
+        }
+    }
+
+
+    void ChangeState()
+    {
+        if (currentState == MonsterState.Idle)
+        {
+            currentState = MonsterState.Patrol;
+            Invoke("Think", 0); // 깨어날 때 즉시 Think 실행
+        }
+        else
+        {
+            currentState = MonsterState.Idle;
+        }
+
+        // 다음 상태 변경 예약
+        Invoke("ChangeState", 4);
     }
 }
