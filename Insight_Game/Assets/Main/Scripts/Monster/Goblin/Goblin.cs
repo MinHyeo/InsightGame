@@ -57,9 +57,11 @@ namespace Monster.Goblin
                 case State.Following:
                     goblinSearch.Search();
                     goblinFollow.Follow();
+                    goblinFollow.CheckAttackable();
                     break;
                 case State.Attacking:
-                    StartCoroutine(goblinAttack.AttackCoroutine());
+                    //StartCoroutine(goblinAttack.AttackCoroutine());
+                    goblinAttack.Attack();
                     break;
                 case State.Dead:
                     break;

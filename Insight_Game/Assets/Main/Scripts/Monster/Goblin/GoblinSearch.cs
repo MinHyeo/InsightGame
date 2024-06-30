@@ -14,7 +14,7 @@ namespace Monster.Goblin
 
         public void Search()
         {
-            RaycastHit2D raycastHit = Physics2D.BoxCast(transform.position, boxCastSize, 0f, Vector2.down, 0f, LayerMask.GetMask("Player"));
+            RaycastHit2D raycastHit = Physics2D.CircleCast(transform.position,13f, Vector3.down, 0f, LayerMask.GetMask("Player"));
             if (raycastHit.collider != null)
             {
                 Target = raycastHit.transform;
