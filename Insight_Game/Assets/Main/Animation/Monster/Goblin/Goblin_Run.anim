@@ -30,12 +30,15 @@ AnimationClip:
       value: {fileID: 5304202850863732263, guid: 048dae4a3e3ffa741b83654644b60a16, type: 3}
     - time: 0.33333334
       value: {fileID: 2833043080597125133, guid: 048dae4a3e3ffa741b83654644b60a16, type: 3}
+<<<<<<< HEAD
     - time: 0.41666666
       value: {fileID: -2217414122262695004, guid: 048dae4a3e3ffa741b83654644b60a16, type: 3}
     - time: 0.5
       value: {fileID: -4440497016933152808, guid: 048dae4a3e3ffa741b83654644b60a16, type: 3}
     - time: 0.5833333
       value: {fileID: 8676454946275842879, guid: 048dae4a3e3ffa741b83654644b60a16, type: 3}
+=======
+>>>>>>> monster-TWJ
     attribute: m_Sprite
     path: 
     classID: 212
@@ -63,15 +66,22 @@ AnimationClip:
     - {fileID: 8284087734974297348, guid: 048dae4a3e3ffa741b83654644b60a16, type: 3}
     - {fileID: 5304202850863732263, guid: 048dae4a3e3ffa741b83654644b60a16, type: 3}
     - {fileID: 2833043080597125133, guid: 048dae4a3e3ffa741b83654644b60a16, type: 3}
+<<<<<<< HEAD
     - {fileID: -2217414122262695004, guid: 048dae4a3e3ffa741b83654644b60a16, type: 3}
     - {fileID: -4440497016933152808, guid: 048dae4a3e3ffa741b83654644b60a16, type: 3}
     - {fileID: 8676454946275842879, guid: 048dae4a3e3ffa741b83654644b60a16, type: 3}
+=======
+>>>>>>> monster-TWJ
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
+<<<<<<< HEAD
     m_StopTime: 0.6666666
+=======
+    m_StopTime: 0.41666666
+>>>>>>> monster-TWJ
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
