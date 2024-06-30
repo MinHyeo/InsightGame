@@ -7,32 +7,33 @@ public class Player : MonoBehaviour {
     public Animator animator;
     public float moveSpeed = 5f; // 플레이어 이동 속도
     public LayerMask enemyLayers;
-    public Weapon weapon;
+    public Rigidbody2D PlayerRigidbody;
+    public float jumpForce = 5f;
 
+    public Weapon weapon;
     private void Awake() {
         animator = GetComponent<Animator>();
         weapon = GetComponentInChildren<Weapon>();
+        PlayerRigidbody = GetComponent<Rigidbody2D>();
     }
     void Start() {
 
     }
 
     void Update() {
-        // 공격 트리거 설정
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            Attack();
+        if (Input.GetMouseButtonDown(0)) {
+            weapon.Attack();
+        }
+        else if (Input.GetKeyDown(KeyCode.Space)) {
+            Jump();
         }
 
         Move();
     }
 
-    void Attack() {
-        animator.SetTrigger("attack");
-    }
-
-    void WeaponAttack() {
-        weapon.Attack();
-        Debug.Log("Animaion clip start");
+    void WeaponDetect() {
+        weapon.Detect();
+        Debug.Log("애니메이션 이벤트 클립 발동");
     }
 
 
@@ -52,5 +53,10 @@ public class Player : MonoBehaviour {
                 transform.localScale = new Vector3(-1f, 1f, 1f);
             }
         }
+    }
+    void Jump() {
+        PlayerRigidbody.velocity = new Vector2(PlayerRigidbody.velocity.x, jumpForce);
+        
+        Debug.Log("Jump!");
     }
 }
