@@ -384,11 +384,18 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Assets/Codes/EnemyMove.cs"
 "Assets/Hero Knight - Pixel Art/ColorSwap/ColorSwap_HeroKnight.cs"
 "Assets/Hero Knight - Pixel Art/Demo/DestroyEvent_HeroKnight.cs"
 "Assets/Hero Knight - Pixel Art/Demo/HeroKnight.cs"
 "Assets/Hero Knight - Pixel Art/Demo/Sensor_HeroKnight.cs"
+"Assets/Main/Scripts/Interfaces.cs"
+"Assets/Main/Scripts/Monster/CheckAttackable.cs"
+"Assets/Main/Scripts/Monster/Goblin/Goblin.cs"
+"Assets/Main/Scripts/Monster/Goblin/GoblinAttack.cs"
+"Assets/Main/Scripts/Monster/Goblin/GoblinFollow.cs"
+"Assets/Main/Scripts/Monster/Goblin/GoblinSearch.cs"
+"Assets/Main/Scripts/Monster/Goblin/GoblinWalk.cs"
+"Assets/Main/Scripts/Monster/Monster.cs"
 -langversion:9.0
 /deterministic
 /optimize+
