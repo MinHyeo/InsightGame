@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Insight_Game/Library/PackageCache/com.unity.memoryprofiler@1.1.0/Editor.meta
 guid: 59c39fc2572aabe4681fb62477a1aed4
 folderAsset: yes
+=======
+guid: d206a6483b3ae9e48b26828a710e3092
+>>>>>>> parent of 3ff31ca3 (Scene Name Modify):Insight_Game/Assets/Scenes/Monster_TWJ.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
