@@ -14,10 +14,13 @@ interface IAttackable
 }
 interface IFollowable
 {
+    //public Transform Target { set; }
+
     public void Follow();
 }
 
 interface IWalkable
 {
+    public void Idle();
     public void Walk();
 }

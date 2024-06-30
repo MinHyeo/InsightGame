@@ -24,7 +24,7 @@ namespace Monster
         protected float attackSpeed;
         protected float attackDamage;
 
-        // ©ø¨£?©¬¢¯¢® MonsterData¢Ò? ¢¯?¡Æ??¨ª¨ú©¬ ??
+        // Monster Data¶û ¿¬µ¿µÇ°Ô ¼öÁ¤ÇØ¾ß µÊ
         protected abstract void StateInit();
     }
 }
